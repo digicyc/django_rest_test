@@ -28,8 +28,8 @@ class TestContent(object):
 
 
 class TestSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    content = serializers.CharField(max_length=200)
+    email = serializers.EmailField(required=False)
+    content = serializers.CharField(max_length=200, required=False)
     creator = serializers.CharField(max_length=80)
 
     def restore_object(self, attrs, instance=None):

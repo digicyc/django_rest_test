@@ -37,3 +37,11 @@ class Snippet(models.Model):
 
     class Meta:
         ordering = ('created',)
+
+
+class Content(models.Model):
+    email = models.EmailField()
+    content = models.CharField(max_length=200, blank=True, default='Empty')
+    creator = models.CharField(max_length=200)
+
+
